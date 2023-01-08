@@ -1,0 +1,15 @@
+type Mutation {
+    productInquirySubmit(input: productInquiryInput!): productInquiryOutput @resolver(class: "\\Cube\\ProductInquiry\\Model\\Resolver\\Inquiry") @doc(description:"Product Inquiry Form")
+}
+
+input productInquiryInput {
+    name: String @doc(description: "The customer's full name")
+    phone: String @doc(description: "The Telephone")
+    email: String @doc(description: "The customer's email address")
+    message: String @doc(description: "The customer's message")
+    sku: String @doc(description: "Product sku")
+}
+
+type productInquiryOutput {
+    success_message: String @doc(description: "Success Message")
+}
