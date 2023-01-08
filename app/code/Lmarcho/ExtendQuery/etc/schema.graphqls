@@ -1,0 +1,3 @@
+interface ProductInterface @typeResolver(class: "Magento\\CatalogGraphQl\\Model\\ProductInterfaceTypeResolverComposite") @doc(description: "The ProductInterface contains attributes that are common to all types of products. Note that descriptions may not be available for custom and EAV attributes.") {
+    view_counts: Int @doc(description: "View Count based of product") @resolver(class: "Lmarcho\\ExtendQuery\\Model\\Resolver\\Product\\AddCustomAttribute")
+}
