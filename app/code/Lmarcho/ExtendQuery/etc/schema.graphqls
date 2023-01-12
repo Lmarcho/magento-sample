@@ -4,3 +4,12 @@
 interface ProductInterface {
     view_count: Int @doc(description: "The total count of all the reviews given to the product.") @resolver(class: "Lmarcho\\ExtendQuery\\Model\\Resolver\\ViewCount")
 }
+
+
+input ProductAttributeFilterInput {
+    view_count: FilterEqualTypeInput @doc(description: "Product Data filter with Custom Attribute Value")
+}
+
+input ProductAttributeSortInput {
+    view_count: SortEnum @doc(description: "Sort by the Product Custom Attribute.")
+}
